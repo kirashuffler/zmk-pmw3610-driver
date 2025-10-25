@@ -7,6 +7,16 @@
 extern "C" {
 #endif
 
+#ifdef CONFIG_PMW3610_MACCEL
+typedef struct _maccel_config_t {
+    float growth_rate;
+    float offset;
+    float limit;
+    float takeoff;
+    bool  enabled;
+} maccel_config_t;
+#endif
+
 /* Timings (in us) used in SPI communication. */
 #define T_CLOCK_ON_DELAY_US 300
 
